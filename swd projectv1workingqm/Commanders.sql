@@ -2,6 +2,19 @@ drop database if exists Commanders;
  create database Commanders;
  use Commanders;
  
+ create table player(
+id int auto_increment,
+Firstname varchar(30),
+Surname varchar(30),
+white boolean,
+blue boolean,
+black boolean,
+red boolean,
+green boolean,
+primary key (id)
+);
+
+ 
 create table deckpowerlevelcount(
 id int auto_increment,
 lvl_1 integer,
@@ -16,16 +29,5 @@ primary key(id)
 );
 
 
-create table player(
-id int auto_increment,
-Firstname varchar(30),
-Surname varchar(30),
-white boolean,
-blue boolean,
-black boolean,
-red boolean,
-green boolean,
-primary key (id)
-);
 
-
+insert into player (Firstname,Surname) values ('John','Doe');
